@@ -255,14 +255,6 @@ footer  {
 
 }
 
-
-
-
-
-
-
-
-
 .toppad {
   padding-top: 30px;
 }
@@ -270,4 +262,13 @@ footer  {
 .alignbottom {
   bottom: -85px;
   position: relative;
+}
+
+.form-group {
+  max-width: 80%;
+  margin: 0 auto;
+
+  .field {
+    padding: 10px 0;
+  }
 }

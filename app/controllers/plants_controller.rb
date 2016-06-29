@@ -1,12 +1,19 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only: :show
   before_action :authenticate_user, only: [:create, :edit, :update, :destroy]
-  autocomplete :location, :site_name
+
 
   # GET /plants
   # GET /plants.json
   def index
-    @plants = Plant.all
+    # @plants = Plant.all
+    # search = params[:search]
+    if params[:search].present?
+      search = params[:search]
+      @plants = Plant.where("name LIKE ?", "%#{search}%")
+    else
+      @plants = Plant.all
+    end
   end
 
   # GET /plants/1
@@ -79,7 +86,7 @@ class PlantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plant_params
-      params.require(:plant).permit(:name, :latin_name, :family, :other_name, :origin, :physical_char, :flavour_profile, :medical_properties, :thrives_in)
+      params.require(:plant).permit(:name, :latin_name, :family, :other_name, :origin, :physical_char, :flavour_profile, :medical_properties, :thrives_in, :location_ids => [])
     end
 
 end

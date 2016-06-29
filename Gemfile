@@ -51,9 +51,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'javascript', '~> 0.0.2'
-gem 'searchlight'
-gem 'twitter-typeahead-rails'
-gem 'bootstrap-multiselect-rails'
 
-gem 'rails3-jquery-autocomplete'
-gem 'nifty-generators'
+gem 'twitter-typeahead-rails'

@@ -1,5 +1,8 @@
+  <div class="form-group">
 
     <h1>New Plant</h1>
+
+
   <%= form_for(plant) do |f| %>
     <% if plant.errors.any? %>
       <div id="error_explanation">
@@ -15,77 +18,72 @@
 
     <div class="field roboto-c uppercase lightgrey">
       <%= f.label :image, "Plant photo url" %>
-      <%= f.text_field :image %>
+      <%= f.text_field :image, class: "form-control bree", placeholder: "e.g. http://img.com/plant1.jpg" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.label :name, "Plant name" %>
+      <%= f.text_field :name, class: "form-control" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :latin_name %>
-      <%= f.text_field :latin_name %>
+      <%= f.label :latin_name, "Scientific name" %>
+      <%= f.text_field :latin_name, class: "form-control" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :family %>
-      <%= f.text_field :family %>
+      <%= f.label :family, "Species family" %>
+      <%= f.text_field :family, class: "form-control" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :other_name %>
-      <%= f.text_field :other_name %>
+      <%= f.label :other_name, "Also known as" %>
+      <%= f.text_field :other_name, class: "form-control" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
       <%= f.label :origin %>
-      <%= f.text_field :origin %>
+      <%= f.text_field :origin, class: "form-control", placeholder: "e.g. South-east Asia" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
       <%= f.label :physical_char, "Physical characteristics" %>
-      <%= f.text_field :physical_char %>
+      <%= f.text_field :physical_char, class: "form-control" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
       <%= f.label :flavour_profile %>
-      <%= f.text_field :flavour_profile %>
+      <%= f.text_field :flavour_profile, class: "form-control", placeholder: "e.g. Slight sweetness" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
       <%= f.label :medical_properties %>
-      <%= f.text_field :medical_properties %>
+      <%= f.text_field :medical_properties, class: "form-control" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
       <%= f.label :thrives_in %>
-      <%= f.text_field :thrives_in %>
+      <%= f.text_field :thrives_in, class: "form-control", placeholder: "e.g. Sunny places" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
       <%= f.label :other_info %>
-      <%= f.text_field :other_info %>
+      <%= f.text_field :other_info, class: "form-control" %>
     </div>
 
    <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :location_ids, "Locations" %>
+
+      <%= f.label :location_ids, "Location of plant" %>
       <%= f.collection_select :location_ids, Location.all, :id, :site_name, {},
       {:multiple => true} %>
     </div>
 
-    <script>var locations = <%= Location.first.site_name%>
-      locations.toString();
-    </script>
-
-    <%= form_tag do %>
-    <%=text_field_tag 'site_name', '', :autocomplete => plant_autocomplete_location_site_name_path %>
-    <% end %>
-
-    <div class="field roboto-c uppercase lightgrey">
-        <%= label_tag :site_name, "Other location" %>
-        <%= text_field_tag :site_name %>
+    <div class="field roboto-c uppercase lightgrey typeahead">
+        <%= label_tag :site_name, "Enter new location" %>
+        <%= text_field_tag :site_name, nil, class: "form-control typeahead" %>
     </div>
+
+
 
     <div class="actions roboto-c uppercase lightgrey">
       <%= f.submit %>
@@ -95,3 +93,4 @@
 
 
 <% end %>
+</div>

@@ -15,7 +15,5 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
-//= require twitter/typeahead
-//= require twitter/typeahead/bloodhound
-//= require bootstrap-multiselect
+//= require twitter/typeahead.min
 //= require_tree .
