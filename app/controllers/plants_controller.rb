@@ -30,6 +30,7 @@ class PlantsController < ApplicationController
 
   # GET /plants/1/edit
   def edit
+    @plant = Plant.find(params[:id])
   end
 
   # POST /plants
@@ -56,6 +57,7 @@ class PlantsController < ApplicationController
   # PATCH/PUT /plants/1
   # PATCH/PUT /plants/1.json
   def update
+    @plant = Plant.find(params[:id])
     respond_to do |format|
       if @plant.update(plant_params)
         format.html { redirect_to @plant, notice: 'Plant was successfully updated.' }
@@ -86,7 +88,7 @@ class PlantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plant_params
-      params.require(:plant).permit(:name, :latin_name, :family, :other_name, :origin, :physical_char, :flavour_profile, :medical_properties, :thrives_in, :location_ids => [])
+      params.require(:plant).permit(:image, :name, :latin_name, :family, :other_name, :origin, :physical_char, :flavour_profile, :medical_properties, :thrives_in, :location_ids => [])
     end
 
 end

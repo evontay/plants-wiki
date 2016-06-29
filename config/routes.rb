@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # get 'sessions/destroy'
 
   get 'typeahead/:query' => 'models#typeahead'
-  get 'plant/autocomplete_location_site_name'
+  
 
   resources :users
   resources :locations

@@ -53,3 +53,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'javascript', '~> 0.0.2'
 
 gem 'twitter-typeahead-rails'
+
+gem "paperclip", "~> 5.0.0.beta1"
