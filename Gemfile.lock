@@ -90,6 +90,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
+    nifty-generators (0.4.6)
     nio4r (1.2.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -121,6 +122,8 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails3-jquery-autocomplete (1.0.15)
+      rails (>= 3.2)
     railties (5.0.0.rc2)
       actionpack (= 5.0.0.rc2)
       activesupport (= 5.0.0.rc2)
@@ -185,9 +188,11 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  nifty-generators
   pg (~> 0.18)
   puma (~> 3.0)
   rails (>= 5.0.0.rc2, < 5.1)
+  rails3-jquery-autocomplete
   sass-rails (>= 3.2)
   searchlight
   spring

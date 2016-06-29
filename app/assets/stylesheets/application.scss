@@ -74,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .bgyellow {
   background-color: $yellow;
+  height: auto;
 }
 
 #header {
@@ -99,23 +100,62 @@ h1, h2, h3, h4, h5, h6 {
 	width: 40%;
 }
 
-#topbar {
+.topbar {
     background-color: $yellow;
     padding: 10px 20px;
 	height: 40px;
 }
 
-#topbar a {
-	color: $darkgrey;
+
+
+
+
+.flash-message {
+  padding-left: 10px;
+  margin-left: 10px;
+  display: inline;
+  color: $lightestgrey;
+  border-left: 1px solid $lightestgrey
 }
 
-#topbar a:hover {
-  text-decoration: none;
-	color: $lightgrey;
+#user {
+	float: left;
+
+
+  p {
+    padding-right: 10px;
+    display: inline;
+  }
+
+  p a {
+    padding-left: 10px;
+    text-transform: uppercase;
+    color: $lightgrey;
+  }
+
+  a:hover {
+    text-decoration: none;
+  	color: $lightestgrey;
+    text-decoration: underline;
+  }
+}
+
+#new-plant {
+  a {
+    float: right;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    color: $lightgrey;
+  }
+
+  a:hover {
+    color: $lightestgrey;
+    text-decoration: underline;
+  }
 }
 
 #menu a {
-  color: $darkgrey;
+  color: black;
   padding: 0 3px 3px 0;
   text-decoration: none;
   text-transform: uppercase;
@@ -124,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #menu a:hover {
   border-bottom: 5px solid $yellow;
-  color: $lightgrey;
+  color: $darkgrey;
 }
 
 .current {
@@ -158,67 +198,76 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-#user {
-	float: left;
-	display: inline;
+
+
+
+.showp h2, .showp{
+  font-family: 'Roboto Condensed', sans-serif;
+
 }
 
-#new-plant{
-    float: right;
-    font-family: 'Bree Serif', serif;
-    font-weight: bold;
-    color: #444;
-}
-
-footer {
-	background: $darkgrey;
-	padding: 20px;
-}
-
-.footerleft a {
-  text-align: left;
-  color: $yellow;
-  padding: 10px;
-  font-size: 1em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  cursor: pointer;
-}
-
-.footercenter {
-  text-align: center;
-}
-
-.footerright{
-  text-align: right;
-}
-
-footer img {
-  padding-top: 20px;
-}
-
-footer p {
+.showp p{
   color: $lightestgrey;
-  line-height: 1.8;
-  padding-top: 30px;
+  font-family: 'Bree Serif', serif;
 }
 
 
 
-footer a:hover {
-  color: white;
-  text-decoration: none;
+footer  {
+
+  background: $darkgrey;
+	padding: 20px;
+
+  img {padding-top: 20px;}
+
+  p {
+    color: $lightestgrey;
+    line-height: 1.8;
+    padding-top: 30px;
+  }
+
+  .footerleft a {
+    text-align: left;
+    color: $yellow;
+    padding: 10px;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+
+  .footerleft a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footercenter {
+    text-align: center;
+  }
+
+  .footerright{
+    text-align: right;
+  }
+
+  .footerright a h3 {
+    color: $yellow;
+  }
+
 }
 
-.footerright a h3 {
-  color: $yellow;
-}
+
+
+
+
+
+
+
 
 .toppad {
   padding-top: 30px;
 }
 
 .alignbottom {
-  bottom: -80px;
+  bottom: -85px;
   position: relative;
 }

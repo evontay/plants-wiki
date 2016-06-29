@@ -54,3 +54,6 @@ gem 'javascript', '~> 0.0.2'
 gem 'searchlight'
 gem 'twitter-typeahead-rails'
 gem 'bootstrap-multiselect-rails'
+
+gem 'rails3-jquery-autocomplete'
+gem 'nifty-generators'

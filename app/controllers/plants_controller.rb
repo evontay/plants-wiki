@@ -1,6 +1,7 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only: :show
   before_action :authenticate_user, only: [:create, :edit, :update, :destroy]
+  autocomplete :location, :site_name
 
   # GET /plants
   # GET /plants.json

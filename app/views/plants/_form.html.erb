@@ -1,5 +1,5 @@
-<div class="row">
-  <div class="col-sm-6 toppad">
+
+    <h1>New Plant</h1>
   <%= form_for(plant) do |f| %>
     <% if plant.errors.any? %>
       <div id="error_explanation">
@@ -78,6 +78,10 @@
       locations.toString();
     </script>
 
+    <%= form_tag do %>
+    <%=text_field_tag 'site_name', '', :autocomplete => plant_autocomplete_location_site_name_path %>
+    <% end %>
+
     <div class="field roboto-c uppercase lightgrey">
         <%= label_tag :site_name, "Other location" %>
         <%= text_field_tag :site_name %>
@@ -86,8 +90,8 @@
     <div class="actions roboto-c uppercase lightgrey">
       <%= f.submit %>
     </div>
-  </div>
-  <div class="col-sm-6 bgyellow"></div>
-</div>
+
+
+
 
 <% end %>
