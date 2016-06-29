@@ -35,14 +35,16 @@
   <h1 class="roboto-c">Edible Plants Of Singapore</h1>
 </div>
 
-<form class="form-control">
-<% form_tag plants_path, :method => 'get' do %>
- <p>
-   <%= text_field_tag :search, params[:search] %>
-   <%= submit_tag "Search", :name => nil %>
- </p>
-<% end %>
+<form class="searchform center has-feedback" action="<%= plants_path %>" method="get" >
+
+  <%= text_field_tag :search, params[:search],  class: "searchfield", placeholder: "Search and enter" %>
+  <span class="searchicon">
+    <span class="glyphicon glyphicon-search"></span>
+  </span>
 </form>
+
+
+
 
 <div class="row">
 
