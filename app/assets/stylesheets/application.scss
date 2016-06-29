@@ -64,6 +64,16 @@ h1, h2, h3, h4, h5, h6 {
   margin:0 15px ;
 }
 
+.pad {
+  padding: 0 15px;
+  max-width: 80%;
+}
+
+.fullwidth {
+  width: 100%;
+  height: auto;
+}
+
 .highlight {
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -219,21 +229,6 @@ h1, h2, h3, h4, h5, h6 {
 .thumbnail .caption {
   padding: 0;
 }
-
-
-
-
-.showp h2, .showp{
-  font-family: 'Roboto Condensed', sans-serif;
-
-}
-
-.showp p{
-  color: $lightestgrey;
-  font-family: 'Bree Serif', serif;
-}
-
-
 
 footer  {
 

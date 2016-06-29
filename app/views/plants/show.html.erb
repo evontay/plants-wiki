@@ -1,23 +1,22 @@
+<div class="row">
 
+  <div class="col-sm-6 toppad pad">
+    <div class="pad">
+      <h2 class="roboto-c"><%= @plant.name %></h2>
 
-<img src="<%= @plant.image %>"/>
-  <div class="showp">
-    <h2 class="roboto-c"><%= @plant.name %></h2>
-
-
-      <h4 class="roboto-c">Latin name:</h4>
+      <h4 class="roboto-c">Scientific name:</h4>
       <p class="lightgrey"><%= @plant.latin_name %></p>
 
       <h4 class="roboto-c">Family:</h4>
       <p class="lightgrey"><%= @plant.family %></p>
 
-      <h4 class="roboto-c">Other name:</h4>
+      <h4 class="roboto-c">Also known as:</h4>
       <p class="lightgrey"><%= @plant.other_name %></p>
 
       <h4 class="roboto-c">Origin:</h4>
       <p class="lightgrey"><%= @plant.origin %></p>
 
-      <h4 class="roboto-c">Physical char:</h4>
+      <h4 class="roboto-c">Physical characteristics:</h4>
       <p class="lightgrey"><%= @plant.physical_char %></p>
 
       <h4 class="roboto-c">Flavour profile:</h4>
@@ -30,13 +29,20 @@
       <p class="lightgrey"><%= @plant.thrives_in %></p>
 
       <h4 class="roboto-c">Locations:</h4>
-       <ul>
+      <ul>
         <% @plant.locations.each do |p| %>
-        <li><%= p.site_name %></li>
+        <li class="bree"><%= p.site_name %></li>
         <% end %>
       </ul>
 
+      <div><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><%= link_to 'Edit', edit_plant_path(@plant) %></div>
+      <div><span class="glyphicon glyphicon-home" aria-hidden="true"><%= link_to 'Back', plants_path %></div>
+
+  </div>
   </div>
 
-<%= link_to 'Edit', edit_plant_path(@plant) %> |
-<%= link_to 'Back', plants_path %>
+  <div class="col-sm-6">
+    <img class="fullwidth" src="<%= @plant.image %>"/>
+  </div>
+
+</div>
