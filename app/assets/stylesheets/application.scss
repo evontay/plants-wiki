@@ -1,0 +1,224 @@
+
+
+$yellow: #FFE310;
+$darkyellow: #F9AD32;
+$darkgrey: #333333;
+$lightgrey:    #777777;
+$lightestgrey: #999999;
+
+
+// Custom bootstrap variables must be set or imported before bootstrap itself.
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+// CUSTOM CSS
+
+
+h1 {font-size: 4em; font-family: 'Roboto Condensed', sans-serif;}
+h2 {font-size: 3em;}
+h3 {font-size: 2em;}
+h4 {font-size: 1.6em;}
+h5 {font-size: 1.5em;}
+h6 {font-size: 1.2em;}
+p {font-size: 1.2em; font-family: 'Bree Serif', serif}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.roboto-c {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.bree {
+    font-family: 'Bree Serif', serif;
+}
+
+.yellow{color:$yellow;}
+.darkyellow{color:$darkyellow;}
+.darkgrey{color:$darkgrey;}
+.lightgrey{color:$lightgrey;}
+.lightestgrey{color: #lightestgrey}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.underline {
+  border-bottom: 3px solid $yellow;
+  padding-bottom: 2px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.widthpad{
+  margin:0 15px ;
+}
+
+.highlight {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $lightestgrey;
+  font-size: 1em;
+  padding-top: 20px;
+}
+
+.bgyellow {
+  background-color: $yellow;
+}
+
+#header {
+    text-align: center;
+    // margin: 20px 0px;
+}
+#header h1 {
+  margin: 50px 0px;
+}
+
+#header a {
+  margin-top: 30px;
+}
+
+.bgshape {
+  // background-color: $yellow;
+  // padding: 10px 40px;
+  margin: 0 auto;
+  border-top: 70px solid $yellow;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	width: 40%;
+}
+
+#topbar {
+    background-color: $yellow;
+    padding: 10px 20px;
+	height: 40px;
+}
+
+#topbar a {
+	color: $darkgrey;
+}
+
+#topbar a:hover {
+  text-decoration: none;
+	color: $lightgrey;
+}
+
+#menu a {
+  color: $darkgrey;
+  padding: 0 3px 3px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#menu a:hover {
+  border-bottom: 5px solid $yellow;
+  color: $lightgrey;
+}
+
+.current {
+  padding: 0 3px 3px 0;
+  text-decoration: none;
+  border-bottom: 5px solid $yellow;
+}
+
+.showbtn {
+  background-color: $yellow;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.showbtn a {
+  color: $darkgrey;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.showbtn a:hover {
+  text-decoration: none;
+  color: $lightgrey;
+}
+
+.thumbnail {
+  padding: 0;
+  margin: 0;
+}
+.thumbnail .caption {
+  padding: 0;
+}
+
+#user {
+	float: left;
+	display: inline;
+}
+
+#new-plant{
+    float: right;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    color: #444;
+}
+
+footer {
+	background: $darkgrey;
+	padding: 20px;
+}
+
+.footerleft a {
+  text-align: left;
+  color: $yellow;
+  padding: 10px;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.footercenter {
+  text-align: center;
+}
+
+.footerright{
+  text-align: right;
+}
+
+footer img {
+  padding-top: 20px;
+}
+
+footer p {
+  color: $lightestgrey;
+  line-height: 1.8;
+  padding-top: 30px;
+}
+
+
+
+footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.footerright a h3 {
+  color: $yellow;
+}
+
+.toppad {
+  padding-top: 30px;
+}
+
+.alignbottom {
+  bottom: -80px;
+  position: relative;
+}

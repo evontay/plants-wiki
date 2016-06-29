@@ -1,0 +1,76 @@
+<div class="container-fluid">
+
+
+<div id="header">
+  <!--<h6 class="bodytext">Foodscape Collective presents</h6>-->
+
+  <div class="row">
+    <div class="col-sm-6 col-md-3 toppad">
+      <h6 id="menu" class="bree">
+        <span class="current">
+        <%= link_to plants_path do %>
+        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> Plants
+        <% end %></span>
+      </h6>
+    </div>
+
+    <div class="col-sm-6 col-md-6 ">
+      <img src="<%= asset_path('foodscapelogoblack.svg')%>"/>
+    </div>
+
+
+
+    <div class="col-sm-6 col-md-3 toppad">
+        <h6 id="menu" class="bree">
+          <%= link_to locations_path do %>
+          <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>  Locations
+          <% end %>
+        </h6>
+    </div>
+
+  </div>
+
+  <p id="notice"><%= notice %></p>
+
+  <h1 class="roboto-c">Edible Plants Of Singapore</h1>
+</div>
+
+
+<div class="row">
+
+  <div class="col-sm-6 col-md-12">
+    <% @plants.each do |plant| %>
+    <div class="thumbnail col-md-3 center">
+      <%= link_to plant_path(plant) do %>
+      <img class="img-responsive" src="<%= plant.image %>" alt="<%= plant.name %>">
+      <% end %>
+        <div class="caption">
+          <h4 class="roboto-c underline">
+            <span class="glyphicon glyphicon-grain yellow" aria-hidden="true"></span>
+            <%= plant.name %>
+          </h4>
+
+        <div class="bree highlight">Also known as </div>
+        <p class="bree widthpad"><%= plant.other_name %></p>
+
+        <div class="bree highlight">Edible parts</div>
+        <p class="bree widthpad"><%= plant.edible_part %></p>
+
+        <p>
+          <!-- <div class="showbtn bree"><%= link_to 'Show More', plant %></div> -->
+          <%= link_to plant_path(plant) do %>
+          <div class="showbtn bree">Show more
+          </div><% end %>
+          <!-- <div class="btn btn-default bree" role="button"><%= link_to 'Edit', edit_plant_path(plant) %></div>
+          <div class="btn btn-default bree" role="button"><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></div> -->
+        </p>
+
+      </div>
+      </div>
+      <% end %>
+
+
+  </div>
+</div>
+
+</div>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  latin_name: MyString
+  family: MyString
+  other_name: MyString
+  origin: MyString
+  physical_char: MyString
+  flavour_profile: MyString
+  medical_properties: MyString
+  thrives_in: MyString
+
+two:
+  name: MyString
+  latin_name: MyString
+  family: MyString
+  other_name: MyString
+  origin: MyString
+  physical_char: MyString
+  flavour_profile: MyString
+  medical_properties: MyString
+  thrives_in: MyString

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+
+<img src="<%= @plant.image %>"/>
+  <div class="showp">
+    <h2 class="roboto-c"><%= @plant.name %></h2>
+
+
+      <h4 class="roboto-c">Latin name:</h4>
+      <p class="lightgrey"><%= @plant.latin_name %></p>
+
+      <h4 class="roboto-c">Family:</h4>
+      <p class="lightgrey"><%= @plant.family %></p>
+
+      <h4 class="roboto-c">Other name:</h4>
+      <p class="lightgrey"><%= @plant.other_name %></p>
+
+      <h4 class="roboto-c">Origin:</h4>
+      <p class="lightgrey"><%= @plant.origin %></p>
+
+      <h4 class="roboto-c">Physical char:</h4>
+      <p class="lightgrey"><%= @plant.physical_char %></p>
+
+      <h4 class="roboto-c">Flavour profile:</h4>
+      <p class="lightgrey"><%= @plant.flavour_profile %></p>
+
+      <h4 class="roboto-c">Medical properties:</h4>
+      <p class="lightgrey"><%= @plant.medical_properties %></p>
+
+      <h4 class="roboto-c">Thrives in:</h4>
+      <p class="lightgrey"><%= @plant.thrives_in %></p>
+
+      <h4 class="roboto-c">Locations:</h4>
+       <ul>
+        <% @plant.locations.each do |p| %>
+        <li><%= p.site_name %></li>
+        <% end %>
+      </ul>
+
+  </div>
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plants_path %>
