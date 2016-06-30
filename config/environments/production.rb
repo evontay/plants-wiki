@@ -83,9 +83,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-end
 
-config.paperclip_defaults = {
+
+  config.paperclip_defaults = {
     :storage => :fog,
         :fog_directory => "plants-wiki",
     :fog_credentials => {
@@ -96,4 +96,4 @@ config.paperclip_defaults = {
       :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
-```
+end
