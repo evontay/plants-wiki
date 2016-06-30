@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 .darkyellow{color:$darkyellow;}
 .darkgrey{color:$darkgrey;}
 .lightgrey{color:$lightgrey;}
-.lightestgrey{color: #lightestgrey;}
+.lightestgrey{color: $lightestgrey;}
 .white{color: white;}
 
 .center {
@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .thumbpad {
-  padding: 20px;
+  padding: 10px;
 }
 
 .thumbmargin {
@@ -77,6 +77,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 15px;
   max-width: 80%;
   margin: 0 auto 30px auto;
+
+  .formtext {
+    color: $darkgrey;
+    font-size: 1.2em;
+    padding: 5px;
+    height: auto;
+  }
 
   h4 {
     padding-top: 30px;
@@ -97,8 +104,8 @@ h1, h2, h3, h4, h5, h6 {
   a:hover {
   color: $yellow;
   text-decoration: none;
-  background-color: $darkgrey;
-  padding: 0 5px;
+  // background-color: $darkgrey;
+  // padding: 0 5px;
     }
 }
 
@@ -276,6 +283,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $darkgrey;
   font-size: 1.2em;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .showbtn a:hover {
@@ -291,6 +299,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 
 }
+
 
 footer  {
 

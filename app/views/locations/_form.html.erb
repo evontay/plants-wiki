@@ -1,4 +1,4 @@
-<h1>New Location</h1>
+<div class="form-group">
 
 <%= form_for(location) do |f| %>
   <% if location.errors.any? %>
@@ -13,29 +13,30 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :site_name %>
-    <%= f.text_field :site_name %>
+  <div class="field roboto-c uppercase lightgrey">
+    <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :site_name %></h5>
+    <%= f.text_field :site_name, class: "form-control formtext bree" %>
   </div>
 
-  <div class="field">
-    <%= f.label :address %>
-    <%= f.text_field :address %>
+  <div class="field roboto-c uppercase lightgrey">
+    <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :address %></h5>
+    <%= f.text_field :address, class: "form-control formtext bree" %>
   </div>
 
-  <div class="field">
-    <%= f.label :type_of_property %>
-    <%= f.text_field :type_of_property %>
+  <div class="field roboto-c uppercase lightgrey">
+    <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :type_of_property %></h5>
+    <%= f.text_field :type_of_property, class: "form-control formtext bree", placeholder: "e.g. Residential garden, HDB corridor, Community garden, Commercial farm" %>
 
   </div>
 
 
-  <div class="field">
-    <%= f.label :other_info %>
-    <%= f.text_field :other_info %>
+  <div class="field roboto-c uppercase lightgrey">
+    <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :other_info %></h5>
+    <%= f.text_field :other_info, class: "form-control formtext bree", placeholder: "e.g. Opening hours, Contact etc" %>
   </div>
 
-  <div class="actions">
+  <div class="submit center roboto-c">
     <%= f.submit %>
   </div>
 <% end %>
+</div>

@@ -1,5 +1,5 @@
 class PlantsController < ApplicationController
-  before_action :set_plant, only: :show
+  before_action :set_plant, only: [:show, :destroy]
   before_action :authenticate_user, only: [:create, :edit, :update, :destroy]
 
 
