@@ -32,7 +32,7 @@
 
 <form class="searchform center has-feedback" action="<%= plants_path %>" method="get" >
 
-  <%= text_field_tag :search, params[:search], class: "searchfield", placeholder: "Search and enter" %>
+  <%= text_field_tag :search, params[:search], class: "searchfield", placeholder: "Search plants and enter" %>
   <span class="searchicon">
     <span class="glyphicon glyphicon-search"></span>
   </span>
@@ -61,14 +61,11 @@
         <div class="bree highlight">Edible parts</div>
         <p class="bree widthpad"><%= plant.edible_part %></p>
 
-        <p>
-          <!-- <div class="showbtn bree"><%= link_to 'Show More', plant %></div> -->
-          <%= link_to plant_path(plant) do %>
+        <%= link_to plant_path(plant) do %>
           <div class="showbtn bree">Show more
-          </div><% end %>
-          <!-- <div class="btn btn-default bree" role="button"><%= link_to 'Edit', edit_plant_path(plant) %></div>
-          <div class="btn btn-default bree" role="button"><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></div> -->
-        </p>
+          </div>
+        <% end %>
+
 
       </div>
       </div>

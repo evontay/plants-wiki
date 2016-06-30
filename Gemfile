@@ -55,3 +55,5 @@ gem 'javascript', '~> 0.0.2'
 gem 'twitter-typeahead-rails'
 
 gem "paperclip", "~> 5.0.0.beta1"
+
+gem "fog"

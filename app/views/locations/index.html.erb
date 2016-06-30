@@ -1,12 +1,13 @@
 <div class="container-fluid">
+
   <div id="header">
     <div class="row">
       <div class="col-sm-6 col-md-3 toppad">
         <h6 id="menu" class="bree">
-          <span class="current">
+
           <%= link_to plants_path do %>
           <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> Plants
-          <% end %></span>
+          <% end %>
         </h6>
       </div>
 
@@ -16,14 +17,50 @@
 
       <div class="col-sm-6 col-md-3 toppad">
         <h6 id="menu" class="bree">
+          <span class="current">
           <%= link_to locations_path do %>
           <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>  Locations
-          <% end %>
+          <% end %></span>
         </h6>
       </div>
     </div>
+
+    <h1 class="roboto-c">Where in Singapore</h1>
   </div>
-<h1 class="roboto-c">Where in Singapore</h1>
+
+  <form class="searchform center has-feedback" action="<%= locations_path %>" method="get" >
+
+    <%= text_field_tag :search, params[:search], class: "searchfield", placeholder: "Search locations and enter" %>
+    <span class="searchicon">
+      <span class="glyphicon glyphicon-search"></span>
+    </span>
+  </form>
+
+  <div class="row">
+    <div class="col-sm-6 col-md-12">
+      <% @locations.each do |location| %>
+      <div class="thumbnail col-md-3 center">
+        <div class="caption">
+          <h4 class="roboto-c underline thumbpad">
+            <span class="glyphicon glyphicon-tree-deciduous yellow" aria-hidden="true"></span>
+            <%= location.site_name %>
+          </h4>
+          <div class="bree highlight">Address</div>
+          <p class="bree widthpad"><%= location.address %></p>
+
+          <div class="bree highlight">Type of property</div>
+          <p class="bree widthpad"><%= location.type_of_property %></p>
+
+          <div class="showbtn roboto-c">
+            <%= link_to location_path(location) do %>
+              Show more</div>
+            <% end %>
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+
 
 
   <tbody>

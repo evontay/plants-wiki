@@ -65,6 +65,14 @@ h1, h2, h3, h4, h5, h6 {
   margin:0 15px ;
 }
 
+.thumbpad {
+  padding: 20px;
+}
+
+.thumbmargin {
+  margin: 10px;
+}
+
 .content {
   padding: 0 15px;
   max-width: 80%;
@@ -81,6 +89,17 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 10px;
     border-left: 3px solid $yellow;
   }
+
+  a {
+  color: $lightestgrey;
+  }
+
+  a:hover {
+  color: $yellow;
+  text-decoration: none;
+  background-color: $darkgrey;
+  padding: 0 5px;
+    }
 }
 
 .fullwidth {
@@ -170,6 +189,7 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
   color: white;
   }
+
   a:hover {
     color: $darkgrey;
   }
@@ -283,6 +303,7 @@ footer  {
     color: $lightestgrey;
     line-height: 1.8;
     padding-top: 30px;
+
   }
 
   .footerleft a {

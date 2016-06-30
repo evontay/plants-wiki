@@ -35,12 +35,11 @@
       <p class="lightgrey"><%= @plant.thrives_in %></p>
 
       <h4 class="roboto-c">Locations:</h4>
-      <ul>
-        <% @plant.locations.each do |p| %>
-          <%= link_to p.site_name, location_path(p) %>
-          <br>
+          <% @plant.locations.each do |p| %>
+          <p class="lightgrey"><a href="<%= location_path(p) %>"><%= p.site_name %></a></p>
+
         <% end %>
-      </ul>
+    </div>
 
 
 
