@@ -36,8 +36,8 @@ class PlantsController < ApplicationController
   # POST /plants
   # POST /plants.json
   def create
-    @plant = Plant.new(plant_params)
-    # @pizza = Pizza.new(params.require(:pizza).permit(:name, :topping_ids => []))
+    @plant = Plant.new( plant_params )
+
     if params[:site_name].present?
       @location = Location.create(site_name: params[:site_name])
       @plant.locations << @location

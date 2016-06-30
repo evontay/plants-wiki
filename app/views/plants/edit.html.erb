@@ -1,6 +1,10 @@
-<h1>Editing Plant</h1>
+<div class="toppad content">
+<ul class="list-inline actions roboto-c center">
+  <li><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span><%= link_to 'Back', @plant %></li>
+  <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span><%= link_to 'Home', plants_path %></li>
+</ul>
+<h1 class="center">Editing Plant Entry</h1>
 
 <%= render 'form', plant: @plant %>
 
-<%= link_to 'Show', @plant %> |
-<%= link_to 'Back', plants_path %>
+</div>

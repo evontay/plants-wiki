@@ -1,6 +1,8 @@
   <div class="form-group">
 
-    <h1>New Plant</h1>
+
+
+
 
   <%= form_for(@plant) do |f| %>
     <% if plant.errors.any? %>
@@ -14,77 +16,77 @@
         </ul>
       </div>
     <% end %>
+    <div class="field roboto-c uppercase lightgrey">
+      <%= f.file_field :image %>
+    </div>
+
+  
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :image, "Plant photo url" %>
-      <%= f.text_field :image, class: "form-control bree", placeholder: "e.g. http://img.com/plant1.jpg" %>
+      <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :name, "Plant name" %></h5>
+      <%= f.text_field :name, class: "form-control bree" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :name, "Plant name" %>
-      <%= f.text_field :name, class: "form-control" %>
+      <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :latin_name, "Scientific name" %></h5>
+      <%= f.text_field :latin_name, class: "form-control bree" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :latin_name, "Scientific name" %>
-      <%= f.text_field :latin_name, class: "form-control" %>
+      <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :family, "Species family" %></h5>
+      <%= f.text_field :family, class: "form-control bree" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :family, "Species family" %>
-      <%= f.text_field :family, class: "form-control" %>
+      <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :other_name, "Also known as" %></h5>
+      <%= f.text_field :other_name, class: "form-control bree" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :other_name, "Also known as" %>
-      <%= f.text_field :other_name, class: "form-control" %>
+      <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :origin %></h5>
+      <%= f.text_field :origin, class: "form-control bree", placeholder: "e.g. South-east Asia" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :origin %>
-      <%= f.text_field :origin, class: "form-control", placeholder: "e.g. South-east Asia" %>
+      <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :physical_char, "Physical characteristics" %></h5>
+      <%= f.text_field :physical_char, class: "form-control bree" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :physical_char, "Physical characteristics" %>
-      <%= f.text_field :physical_char, class: "form-control" %>
+      <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :flavour_profile %></h5>
+      <%= f.text_field :flavour_profile, class: "form-control bree", placeholder: "e.g. Slight sweetness" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :flavour_profile %>
-      <%= f.text_field :flavour_profile, class: "form-control", placeholder: "e.g. Slight sweetness" %>
+      <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :medical_properties %></h5>
+      <%= f.text_field :medical_properties, class: "form-control bree" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :medical_properties %>
-      <%= f.text_field :medical_properties, class: "form-control" %>
+      <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :thrives_in %></h5>
+      <%= f.text_field :thrives_in, class: "form-control bree", placeholder: "e.g. Sunny places" %>
     </div>
 
     <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :thrives_in %>
-      <%= f.text_field :thrives_in, class: "form-control", placeholder: "e.g. Sunny places" %>
-    </div>
-
-    <div class="field roboto-c uppercase lightgrey">
-      <%= f.label :other_info %>
-      <%= f.text_field :other_info, class: "form-control" %>
+      <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= f.label :other_info %></h5>
+      <%= f.text_field :other_info, class: "form-control bree" %>
     </div>
 
    <div class="field roboto-c uppercase lightgrey">
 
-      <%= f.label :location_ids, "Location of plant" %>
-      <%= f.collection_select :location_ids, Location.all, :id, :site_name, {},
-      {:multiple => true} %>
+      <h5><span class="glyphicon glyphicon-check yellow" aria-hidden="true"></span><%= f.label :location_ids, "Location of plant" %></h5>
+      <div class="dropdown"><%= f.collection_select :location_ids, Location.all, :id, :site_name, {class: "dropdown-menu"},
+      {:multiple => true} %></div>
     </div>
 
     <div class="field roboto-c uppercase lightgrey typeahead">
-        <%= label_tag :site_name, "Enter new location" %>
+        <h5><span class="glyphicon glyphicon-pencil yellow" aria-hidden="true"></span><%= label_tag :site_name, "Create new location (Optional)" %></h5>
         <%= text_field_tag :site_name, nil, class: "form-control typeahead" %>
     </div>
 
 
 
-    <div class="actions roboto-c uppercase lightgrey">
+    <div class="submit center roboto-c">
       <%= f.submit %>
     </div>
 
