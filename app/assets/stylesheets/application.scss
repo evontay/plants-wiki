@@ -350,12 +350,18 @@ footer  {
     text-align: center;
   }
 
-  .footerright{
+  .footerright {
     text-align: right;
   }
 
-  .footerright a h3 {
+  .footerright a{
     color: $yellow;
+  }
+
+
+  .footerright a:hover, .footerright a h3:hover {
+    color:white;
+    text-decoration: none;
   }
 
 }
