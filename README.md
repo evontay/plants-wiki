@@ -1,24 +1,26 @@
-# README
+# Edible Plants Wiki
+An open-source wiki to collect information about the types of edible plants found in Singapore. Made for Foodscape Collective, a non-profit organization that promotes urban food growing in Singapore.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Link to app: http://plants-wiki.herokuapp.com/
+* Github: https://github.com/evontay/plants-wiki
 
-Things you may want to cover:
+###Built with
+- Ruby on rails
+- HTML/CSS
 
-* Ruby version
+###Features
+- User login and authentication
+- Paperclip image upload
+- Relational data modeling
+- Styling responsive masonry-type grids on CSS
+- Search function using params
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###WDI unit 2 learning points
+* Building databases on RoR
+* Deploying a web app on heroku
+* MCV-r
+* CRUD
+* User authentication
+* Installing gems
+* Using aws for image upload and hosting

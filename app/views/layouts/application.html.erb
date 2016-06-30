@@ -15,42 +15,14 @@
   </head>
 
   <body>
-    <div class="topbar">
 
-      <div class="user" class="bree">
-        <% if user_logged_in? %>
-          <p class="greeting"> Hello, <%= current_user.name %></p>  | <p> <%= link_to "Log out", logout_path, method: :delete %>
-        <% else %></p>
-          <p>
-            <%= link_to "Log in", login_path %>
-            <%= link_to "New user", new_user_path %>
-        <% end %></p>
-
-        <% flash.each do |name, message| %>
-          <div class="flash-message flash-message-<%= name %>">
-            <%= message %>
-          </div>
-        <% end %>
-      </div>
-
-      <div class="home center">
-        <h6><a href="<%= plants_path %>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></h6>
-      </div>
-
-
-      <div class="new-plant">
-        <%= link_to new_plant_path do %>
-        <span class="glyphicon glyphicon-plus-sign white" aria-hidden="true"></span>  Add new plant
-        <% end %>
-      </div>
-    </div>
-
+  <%= render "plants/plantstopbar" %>
 
     <%= yield %>
 
 
   <%= render "layouts/footer" %>
-  
+
   </body>
 
 </html>
