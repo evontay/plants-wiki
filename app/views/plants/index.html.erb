@@ -39,15 +39,19 @@
 </form>
 
 
+<!-- Start masonry grid -->
 
+<div class="wrapper">
 
-<div class="row">
-
-  <div class="col-sm-6 col-md-12">
+  <!-- <div class="col-sm-6 col-md-12"> -->
     <% @plants.each do |plant| %>
-    <div class="thumbnail col-md-3 center">
+
+    <div class="thumbnail center">
       <%= link_to plant_path(plant) do %>
-      <img class="img-responsive" src="<%= plant.image %>" alt="<%= plant.name %>">
+      <div class="brightness">
+        <img class="img-responsive " src="<%= plant.image %>" alt="<%= plant.name %>">
+      </div>
+
       <% end %>
         <div class="caption">
           <h4 class="roboto-c underline thumbpad">
@@ -70,12 +74,12 @@
 
 
 
-      </div>
-      </div>
-      <% end %>
+      </div><!-- caption -->
+    </div> <!-- thumbnail -->
+      <% end %> <!--@plants.each do |plant|-->
 
 
-  </div>
-</div>
+  <!-- </div>  col-sm-6 col-md-12-->
+</div> <!--wrapper -->
 
-</div>
+</div><!-- container-fluid -->

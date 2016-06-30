@@ -36,10 +36,11 @@
     </span>
   </form>
 
-  <div class="row">
-    <div class="col-sm-6 col-md-12">
+  <div class="wrapper">
+
       <% @locations.each do |location| %>
-      <div class="thumbnail col-md-3 center">
+
+      <div class="thumbnail center">
         <div class="caption">
           <h4 class="roboto-c underline thumbpad">
             <span class="glyphicon glyphicon-tree-deciduous yellow" aria-hidden="true"></span>
@@ -59,22 +60,3 @@
       </div>
       <% end %>
   </div>
-
-
-
-
-  <tbody>
-    <% @locations.each do |location| %>
-      <tr>
-        <td><%= location.site_name %></td>
-        <td><%= link_to 'Show', location %></td>
-        <td><%= link_to 'Edit', edit_location_path(location) %></td>
-        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Location', new_location_path %>

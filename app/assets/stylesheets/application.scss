@@ -73,6 +73,26 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px;
 }
 
+.brightness {
+    background-color: white;
+    display: inline-block;
+    z-index: 99;
+}
+.brightness img:hover {
+    opacity: .5;
+}
+
+.locationcontent {
+  margin: 30px;
+
+  h1 {
+    padding-bottom: 30px
+  }
+  p {
+    padding: 10px;
+  }
+}
+
 .content {
   padding: 0 15px;
   max-width: 80%;
@@ -273,32 +293,6 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 5px solid $yellow;
 }
 
-.showbtn {
-  background-color: $yellow;
-  margin-top: 20px;
-  padding: 10px;
-}
-
-.showbtn a {
-  color: $darkgrey;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.showbtn a:hover {
-  text-decoration: none;
-  color: $lightgrey;
-}
-
-.thumbnail {
-  padding: 0;
-  margin: 0;
-}
-.thumbnail .caption {
-  padding: 0;
-
-}
 
 
 footer  {
@@ -312,7 +306,6 @@ footer  {
     color: $lightestgrey;
     line-height: 1.8;
     padding-top: 30px;
-
   }
 
   .footerleft a {
@@ -397,4 +390,46 @@ footer  {
 }
 .submit input:hover {
   background-color: #E6E6E6;
+}
+
+// MASONRY LAYOUT
+.wrapper {
+  -webkit-columns: 300px;
+  -moz-columns: 300px;
+  columns: 300px;
+  -webkit-column-gap: 20px;
+  -moz-column-gam: 20px;
+  column-gap: 20px;
+
+}
+
+.thumbnail {
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: inline-block;
+}
+
+.thumbnail .caption {
+  padding: 0;
+}
+
+.showbtn {
+  background-color: $yellow;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.showbtn a {
+  color: $darkgrey;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.showbtn a:hover {
+  text-decoration: none;
+  color: $lightgrey;
 }
