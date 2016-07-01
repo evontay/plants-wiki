@@ -41,7 +41,8 @@
 
       <h4 class="roboto-c">Locations:</h4>
         <% @plant.locations.each do |p| %>
-          <p class="lightgrey"><a href="<%= location_path(p) %>"><%= p.site_name %></a></p>
+          <p class="lightgrey where">
+            <span class="glyphicon glyphicon-map-marker yellow" aria-hidden="true"></span> <a href="<%= location_path(p) %>"><%= p.site_name %></a></p>
         <% end %>
     </div><!--content-->
 

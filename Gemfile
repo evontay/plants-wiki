@@ -57,3 +57,7 @@ gem 'twitter-typeahead-rails'
 gem "paperclip", "~> 5.0.0.beta1"
 
 gem "fog"
+
+gem 'jquery-infinite-pages'
+
+gem 'kaminari', :git => 'git@github.com:amatsuda/kaminari.git' 

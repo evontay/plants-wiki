@@ -16,4 +16,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require twitter/typeahead.min
+//= require jquery.infinite-pages
 //= require_tree .

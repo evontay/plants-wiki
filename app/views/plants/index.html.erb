@@ -5,20 +5,20 @@
 <div id="header">
 
   <div class="row">
-    <div class="col-sm-6 col-md-3 toppad">
+    <div class="col-sm-6 col-md-4 toppad">
       <h6 id="menu" class="bree">
-        <span class="current">
+        <span class="currentp">
         <%= link_to plants_path do %>
         <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> Plants
         <% end %></span>
       </h6>
     </div>
 
-    <div class="col-sm-6 col-md-6 ">
+    <div class="col-sm-6 col-md-4 hidez">
       <img src="<%= asset_path('foodscapelogoblack.svg')%>"/>
     </div>
 
-    <div class="col-sm-6 col-md-3 toppad">
+    <div class="col-sm-6 col-md-4 toppad">
         <h6 id="menu" class="bree">
           <%= link_to locations_path do %>
           <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>  Locations
@@ -42,45 +42,75 @@
 
 <!-- Start masonry grid -->
 
-<div class="wrapper">
+<div class="wrapper infinite-table">
 
   <!-- <div class="col-sm-6 col-md-12"> -->
     <% @plants.each do |plant| %>
+      <div class="thumbnail center">
 
-    <div class="thumbnail center">
-      <%= link_to plant_path(plant) do %>
-      <div class="brightness">
-        <img class="img-responsive " src="<%= plant.image %>" alt="<%= plant.name %>">
-      </div>
+        <%= link_to plant_path(plant) do %>
+          <div class="brightness">
+            <img class="img-responsive " src="<%= plant.image %>" alt="<%= plant.name %>">
+          </div>
+        <% end %>
 
-      <% end %>
         <div class="caption">
           <h4 class="roboto-c underline thumbpad">
             <span class="glyphicon glyphicon-grain yellow" aria-hidden="true"></span>
             <%= plant.name %>
           </h4>
 
-        <div class="bree highlight">Also known as </div>
-        <p class="bree widthpad"><%= plant.other_name %></p>
+          <div class="bree highlight">Also known as </div>
+          <p class="bree widthpad"><%= plant.other_name %></p>
 
-        <div class="bree highlight">Edible parts</div>
-        <p class="bree widthpad"><%= plant.edible_part %></p>
-
+          <div class="bree highlight">Edible parts</div>
+          <p class="bree widthpad"><%= plant.edible_part %></p>
 
           <div class="showbtn bree">
             <%= link_to plant_path(plant) do %>
-            Show more
+              Show more
             <% end %>
           </div>
 
+        </div><!-- caption -->
+      </div> <!-- thumbnail -->
+    <% end %>
 
 
-      </div><!-- caption -->
-    </div> <!-- thumbnail -->
-      <% end %> <!--@plants.each do |plant|-->
 
 
-  <!-- </div>  col-sm-6 col-md-12-->
+
+
 </div> <!--wrapper -->
+
+
+  <% scope = Plant.all.page(params[:page]) %>
+  <%= paginate(scope) %>
+
+
+<!--Infinite scroll function -->
+<script type="text/javascript">
+
+
+  $('.infinite-table').infinitePages
+  debug: true
+  buffer: 200
+  context: '.pane'
+  loading: ->
+
+   $(this).text("Loading...")
+  success: ->
+  error: ->
+   $(this).text("Trouble! Please drink some coconut water and click again")
+
+  // Append new data
+  $(".wrapper")
+  .appendTo($(".infinite-table"));
+
+  // Update pagination link
+
+</script>
+
+
 
 </div><!-- container-fluid -->

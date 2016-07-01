@@ -8,12 +8,21 @@ class PlantsController < ApplicationController
   def index
     # @plants = Plant.all
     # search = params[:search]
+
+    # @plants = Plant.order(:name).page params[:page]
+
+    def last_page(child)
+    reflections[child] ? send(child).num_pages : nil
+    end
+
     if params[:search].present?
       search = params[:search]
       @plants = Plant.where("name LIKE ?", "%#{search}%")
     else
-      @plants = Plant.all
+      @plants = Plant.order('plants.name ASC').page(params[:page])
     end
+
+
   end
 
   # GET /plants/1

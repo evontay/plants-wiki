@@ -1,5 +1,5 @@
+<div class="content">
 <div class="locationcontent center toppad">
-
 
   <ul class="list-inline actions roboto-c center">
     <li><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><%= link_to 'Edit', edit_location_path(@location) %></li>
@@ -9,21 +9,48 @@
 
   <h2 class="roboto-c center"><%= @location.site_name %></h2>
 
+</div>
 
-    <h4 class="roboto-c">Site name:</h4>
-    <p class="lightgrey"><%= @location.site_name %> </p>
+<table class="table">
+
+  <tbody>
+    <tr>
+      <td><h4 class="roboto-c">Site name:</h4></td>
+      <td><p class="lightgrey"><%= @location.site_name %> </p></td>
+    </tr>
+
+    <tr>
+      <td><h4 class="roboto-c">Address:</h4></td>
+      <td><p class="lightgrey"><%= @location.address %></p></td>
+    </tr>
+
+    <tr>
+      <td><h4 class="roboto-c">Type of property:</h4></td>
+      <td><p class="lightgrey"><%= @location.type_of_property %></p></td>
+    </tr>
+
+    <tr>
+      <td><h4 class="roboto-c">Other info:</h4></td>
+      <td><p class="lightgrey"><%= @location.other_info %></p></td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
 
 
-    <h4 class="roboto-c">Address:</h4>
-    <p class="lightgrey"><%= @location.address %></p>
 
 
-    <h4 class="roboto-c">Type of property:</h4>
-    <p class="lightgrey"><%= @location.type_of_property %></p>
 
 
-    <h4 class="roboto-c">Other info:</h4>
-    <p class="lightgrey"><%= @location.other_info %></p>
+
+
+
+
+
+
+
+
 
     <p><%= link_to 'Back', locations_path %></p>
 

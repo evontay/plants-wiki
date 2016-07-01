@@ -1,3 +1,11 @@
+GIT
+  remote: git@github.com:amatsuda/kaminari.git
+  revision: 92db78516c1c8f0efd82af0bef635cfca846cab3
+  specs:
+    kaminari (1.0.0.alpha)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -206,6 +214,10 @@ GEM
     jbuilder (2.5.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
+    jquery-infinite-pages (0.2.0)
+      coffee-script
+      jquery-rails
+      railties (>= 3.1)
     jquery-rails (4.1.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -330,7 +342,9 @@ DEPENDENCIES
   fog
   javascript (~> 0.0.2)
   jbuilder (~> 2.5)
+  jquery-infinite-pages
   jquery-rails
+  kaminari!
   listen (~> 3.0.5)
   paperclip (~> 5.0.0.beta1)
   pg (~> 0.18)

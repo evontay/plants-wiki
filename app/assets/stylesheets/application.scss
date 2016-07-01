@@ -103,6 +103,8 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+
+
   .one {
     background-color: #E6E6E6;
   }
@@ -111,6 +113,13 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
   }
 
+  .left {
+    text-align: left;
+  }
+
+  .right {
+    text-align: right;
+  }
 
 }
 
@@ -213,7 +222,7 @@ h1, h2, h3, h4, h5, h6 {
 
   p  {
     display: inline;
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
   p a {
@@ -221,6 +230,8 @@ h1, h2, h3, h4, h5, h6 {
     color: $lightgrey;
     border-right: 1px solid $lightestgrey;
     padding: 0 10px;
+    font-size: 0.9em;
+    letter-spacing: 2px;
   }
 
   a:hover {
@@ -237,11 +248,11 @@ h1, h2, h3, h4, h5, h6 {
 .home {
   a {
   flex: 1;
-  color: white;
+  color: $darkgrey;
   }
 
   a:hover {
-    color: $darkgrey;
+    color: white;
   }
 }
 
@@ -250,6 +261,8 @@ h1, h2, h3, h4, h5, h6 {
   display: inline;
   color: $lightestgrey;
   font-family: 'Bree Serif', serif;
+  font-size: 1.2em;
+  color: black;
 }
 
 .new-plant {
@@ -310,30 +323,39 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2em;
 }
 
-.current {
+.currentp {
   padding: 0 3px 3px 0;
   text-decoration: none;
   border-bottom: 5px solid $yellow;
 }
 
-
+.content .where {
+  color: $yellow;
+  border: none;
+  padding-left: 0px;
+  margin-left: -2px;
+}
 
 footer  {
 
   background: $darkgrey;
 	padding: 20px;
 
-  img {padding-top: 20px;}
+  img {
+    margin: 20px 0 8px 0;
+    height: 3em;
+  }
 
   p {
-    color: $lightestgrey;
+    color: $yellow;
     line-height: 1.8;
     padding-top: 30px;
+
   }
 
   .footerleft a {
     text-align: left;
-    color: $yellow;
+    color: $lightestgrey;
     padding: 10px;
     font-size: 1em;
     text-transform: uppercase;
@@ -342,7 +364,7 @@ footer  {
   }
 
   .footerleft a:hover {
-    color: white;
+    color: $yellow;
     text-decoration: none;
   }
 
@@ -355,12 +377,12 @@ footer  {
   }
 
   .footerright a{
-    color: $yellow;
+    color: $lightestgrey;
   }
 
 
   .footerright a:hover, .footerright a h3:hover {
-    color:white;
+    color:$yellow;
     text-decoration: none;
   }
 
@@ -462,4 +484,44 @@ footer  {
 .showbtn a:hover {
   text-decoration: none;
   color: $lightgrey;
+}
+
+.hidez {
+  display: block;
+}
+
+.pagination {
+  text-align: center;
+  display: block;
+  font-family: 'Bree Serif', serif;
+  color: $lightgrey;
+  font-size: 1.2em;
+
+  .first, .prev, .page, .current, .next, .last {
+    margin: 0 10px;
+  }
+
+  a {
+    color: $lightgrey;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $yellow;
+  }
+
+  span.page.current  {
+    border-bottom: 2px solid $yellow;
+    font-family: 'Bree Serif', serif;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .hidez {
+    display: none;
+  }
 }

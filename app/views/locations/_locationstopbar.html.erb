@@ -1,6 +1,6 @@
 <div class="topbar">
 
-  <div class="user" class="bree">
+  <div class="user bree">
     <% if user_logged_in? %>
       <p class="greeting"> Hello, <%= current_user.name %></p>  | <p> <%= link_to "Log out", logout_path, method: :delete %>
     <% else %></p>
@@ -23,7 +23,7 @@
 
   <div class="new-plant">
     <%= link_to new_location_path do %>
-    <span class="glyphicon glyphicon-plus-sign white" aria-hidden="true"></span>  Add new plant
+    <span class="glyphicon glyphicon-plus-sign white" aria-hidden="true"></span>  Add new location
     <% end %>
   </div>
 </div>
