@@ -48,7 +48,7 @@
     <% @plants.each do |plant| %>
       <div class="thumbnail center">
 
-        <%= link_to plant_path(plant) do %>
+        <%= link_to plant_path(plant), :target => "_blank" do  %>
           <div class="brightness">
             <img class="img-responsive " src="<%= plant.image %>" alt="<%= plant.name %>">
           </div>
@@ -66,21 +66,15 @@
           <div class="bree highlight">Edible parts</div>
           <p class="bree widthpad"><%= plant.edible_part %></p>
 
-          <div class="showbtn bree">
-            <%= link_to plant_path(plant) do %>
+          <%= link_to plant_path(plant), :target => "_blank" do  %>
+            <div class="showbtn roboto-c">
               Show more
-            <% end %>
-          </div>
+            </div>
+          <% end %>
 
         </div><!-- caption -->
       </div> <!-- thumbnail -->
     <% end %>
-
-
-
-
-
-
 </div> <!--wrapper -->
 
 
@@ -110,7 +104,5 @@
   // Update pagination link
 
 </script>
-
-
 
 </div><!-- container-fluid -->

@@ -44,20 +44,23 @@
 
       <div class="thumbnail center">
         <div class="caption">
-          <h4 class="roboto-c underline thumbpad">
-            <span class="glyphicon glyphicon-tree-deciduous yellow" aria-hidden="true"></span>
-            <%= location.site_name %>
-          </h4>
+          <%= link_to location_path(location), :target => "_blank" do  %>
+            <h4 class="roboto-c underline thumbpad">
+              <span class="glyphicon glyphicon-tree-deciduous yellow" aria-hidden="true"></span>
+              <%= location.site_name %>
+            </h4>
+          <% end %>
           <div class="bree highlight">Address</div>
           <p class="bree widthpad"><%= location.address %></p>
 
           <div class="bree highlight">Type of property</div>
           <p class="bree widthpad"><%= location.type_of_property %></p>
 
-          <div class="showbtn roboto-c">
-            <%= link_to location_path(location) do %>
-              Show more</div>
-            <% end %>
+          <%= link_to location_path(location), :target => "_blank" do %>
+            <div class="showbtn roboto-c">
+              Show more
+            </div>
+          <% end %>
         </div>
       </div>
       <% end %>

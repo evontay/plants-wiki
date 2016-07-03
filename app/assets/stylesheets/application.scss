@@ -97,37 +97,25 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
 
 .col {
   flex: 1;
   overflow: hidden;
 }
 
-table {
 
-.content h4 {
-  padding: 0;
+
+td h4 {
+    padding: 0;
+    margin: 0;
 }
-}
 
+// .one {background-color: #E6E6E6;}
+// .one img  { width: 100%;}
+// .left {text-align: left;}
+// .right {text-align: right;}
 
-  .one {
-    background-color: #E6E6E6;
-  }
-
-  .one img  {
-    width: 100%;
-  }
-
-  .left {
-    text-align: left;
-  }
-
-  .right {
-    text-align: right;
-  }
-
-}
 
 .content {
   padding: 0 15px;
@@ -153,19 +141,14 @@ table {
     border-left: 3px solid $yellow;
   }
 
-  a {
-  color: $lightestgrey;
-  }
+  a { color: $lightestgrey; }
 
   a:hover {
   color: $yellow;
   text-decoration: none;
-  // background-color: $darkgrey;
-  // padding: 0 5px;
-    }
+  }
+
 }
-
-
 
 .fullwidth {
   width: 100%;
@@ -173,9 +156,7 @@ table {
   padding:0;
   margin: 0;
   background-color: #E6E6E6;
-  img{
-    width: 100%;
-  }
+  img{ width: 100%; }
 }
 
 .highlight {
@@ -193,25 +174,14 @@ table {
 
 #header {
     text-align: center;
-    // margin: 20px 0px;
 }
+
 #header h1 {
   margin: 50px 0px;
 }
 
 #header a {
   margin-top: 30px;
-}
-
-.bgshape {
-  // background-color: $yellow;
-  // padding: 10px 40px;
-  margin: 0 auto;
-  border-top: 70px solid $yellow;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	height: 0;
-	width: 40%;
 }
 
 .topbar {
@@ -246,9 +216,7 @@ table {
     text-decoration: underline;
   }
 
-  .greeting {
-    padding: 0 10px;
-  }
+  .greeting { padding: 0 10px; }
 }
 
 .home {
@@ -323,6 +291,7 @@ table {
     text-transform: capitalize;
   }
 }
+
 .searchicon {
   color: $lightestgrey;
   margin: -50px;
@@ -343,7 +312,6 @@ table {
 }
 
 footer  {
-
   background: $darkgrey;
 	padding: 20px;
 
@@ -356,7 +324,6 @@ footer  {
     color: $yellow;
     line-height: 1.8;
     padding-top: 30px;
-
   }
 
   .footerleft a {
@@ -374,24 +341,14 @@ footer  {
     text-decoration: none;
   }
 
-  .footercenter {
-    text-align: center;
-  }
-
-  .footerright {
-    text-align: right;
-  }
-
-  .footerright a{
-    color: $lightestgrey;
-  }
-
+  .footercenter { text-align: center; }
+  .footerright { text-align: right; }
+  .footerright a{ color: $lightestgrey; }
 
   .footerright a:hover, .footerright a h3:hover {
     color:$yellow;
     text-decoration: none;
   }
-
 }
 
 .toppad {
@@ -445,6 +402,7 @@ footer  {
   margin: 20px auto 50px auto;
   padding: 15px 30px;
 }
+
 .submit input:hover {
   background-color: #E6E6E6;
 }
@@ -472,22 +430,23 @@ footer  {
 
 .thumbnail .caption {
   padding: 0;
+
 }
 
 .showbtn {
   background-color: $yellow;
   margin-top: 20px;
   padding: 10px;
-}
-
-.showbtn a {
-  color: $darkgrey;
-  font-size: 1.2em;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.showbtn a:hover {
+.caption a {
+  color: $darkgrey;
+  font-size: 1.2em;
+}
+
+.caption a:hover {
   text-decoration: none;
   color: $lightgrey;
 }

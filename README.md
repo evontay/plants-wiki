@@ -5,8 +5,17 @@ An open-source wiki to collect information about the types of edible plants foun
 * Github: https://github.com/evontay/plants-wiki
 
 ###Built with
-- Ruby on rails
-- HTML/CSS
+- Ruby on Rails, >= 5.0.0.rc2
+- Postgresql
+- HTML/SCSS
+
+###Gems installed
+- paperclip
+- fog
+- kaminari
+- bootstrap-sass
+- javascript
+- bcrypt
 
 ###Features
 - User login and authentication
