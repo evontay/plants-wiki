@@ -60,4 +60,4 @@ gem "fog"
 
 gem 'jquery-infinite-pages'
 
-gem 'kaminari', :git => 'git@github.com:amatsuda/kaminari.git' 
+gem 'kaminari'
