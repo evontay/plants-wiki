@@ -1,3 +1,5 @@
+
+
 <div class="topbar">
 
   <div class="user bree">
@@ -22,8 +24,37 @@
 
 
   <div class="new-plant">
-    <%= link_to new_location_path do %>
-    <span class="glyphicon glyphicon-plus-sign white" aria-hidden="true"></span>  Add new location
-    <% end %>
+    <div class="dropdown navbar-right">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add new entry<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li>
+          <%= link_to new_plant_path do %>
+          <span class="glyphicon glyphicon-plus-sign white" aria-hidden="true"></span>  New plant
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_location_path do %>
+          <span class="glyphicon glyphicon-plus-sign white" aria-hidden="true"></span>  New location
+          <% end %>
+        </li>
+      </ul>
+    </div>
   </div>
+
+
+
 </div>
+<!-- <div class="mobilemenu">
+  <ul>
+    <li>
+      <%= link_to new_plant_path do %>
+      <span class="glyphicon glyphicon-plus-sign white" aria-hidden="true"></span>  Add new plant
+      <% end %>
+    </li>
+    <li>
+      <%= link_to new_location_path do %>
+      <span class="glyphicon glyphicon-plus-sign white" aria-hidden="true"></span>  Add new location
+      <% end %>
+    </li>
+  </ul>
+</div> -->

@@ -184,13 +184,67 @@ td h4 {
   margin-top: 30px;
 }
 
+.navbar {
+  margin: 0;
+
+}
 .topbar {
-    background-color: $yellow;
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  background-color: $yellow;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 	height: 40px;
+}
+
+.mobilemenu {
+  background-color: $darkgrey;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    padding: 10px 20px;
+    border-top: 2px solid white;
+
+    a {
+      color: $yellow;
+      font-family: 'Bree Serif', serif;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    // min-width: 160px;
+    // padding: 5px 0;
+    // margin: 2px 0 0;
+    // list-style: none;
+    // font-size: 14px;
+    text-align: left;
+    background-color: $darkgrey;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+    li a {
+      color: $yellow;
+      text-align:  center;
+    }
+
+    li a:focus, li a:hover {
+      background-color: transparent;
+      color: white;
+    }
 }
 
 .user {
@@ -239,6 +293,8 @@ td h4 {
   color: black;
 }
 
+
+
 .new-plant {
   flex: 1;
 
@@ -258,7 +314,7 @@ td h4 {
 
   a:hover {
     color: $lightgrey;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
