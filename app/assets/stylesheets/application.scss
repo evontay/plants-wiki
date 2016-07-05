@@ -184,17 +184,33 @@ td h4 {
   margin-top: 30px;
 }
 
-.navbar {
-  margin: 0;
-
-}
+// .navbar {
+//   margin: 0;
+//
+// }
 .topbar {
   background-color: $yellow;
   padding: 10px 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-	height: 40px;
+}
+
+.mtopbar {
+  background-color: $yellow;
+  padding: 10px 20px;
+  display: inline;
+  height: 40px;
+}
+// .expand {
+//   display: block;
+// }
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
 }
 
 .mobilemenu {
@@ -205,15 +221,20 @@ td h4 {
   }
   li {
     padding: 10px 20px;
-    border-top: 2px solid white;
+    border-bottom: 2px solid $yellow;
+  }
 
-    a {
-      color: $yellow;
-      font-family: 'Bree Serif', serif;
-      font-size: 1.2em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
+  a {
+    color: white;
+    font-family: 'Bree Serif', serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  a:hover {
+    color: $yellow;
+    text-decoration: none;
   }
 }
 
@@ -486,7 +507,6 @@ footer  {
 
 .thumbnail .caption {
   padding: 0;
-
 }
 
 .showbtn {
@@ -538,11 +558,36 @@ footer  {
 
 }
 
+.mobile {
+  display: none;
+}
 
+.normal {
+  display: block;
+}
+@media screen and (max-width: 790px) {
+  .mobile {
+    display: block;
+  }
+
+  .normal {
+    display: none;
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+  }
+}
 
 
 @media screen and (max-width: 1000px) {
   .hidez {
     display: none;
   }
+
+
 }
