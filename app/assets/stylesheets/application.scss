@@ -225,6 +225,7 @@ td h4 {
   }
 
   a {
+    cursor: pointer;;
     color: white;
     font-family: 'Bree Serif', serif;
     font-size: 1em;
@@ -318,12 +319,14 @@ td h4 {
 
 .new-plant {
   flex: 1;
-
+  cursor: pointer;
+  
   span{
     margin-right: 5px;
     font-size: 1.2em;
   }
   a {
+    cursor: pointer;
     text-transform: uppercase;
     font-size: 1em;
     float: right;
@@ -334,6 +337,7 @@ td h4 {
   }
 
   a:hover {
+    cursor: pointer;
     color: $lightgrey;
     text-decoration: none;
   }
