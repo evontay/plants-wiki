@@ -5,6 +5,7 @@ $darkyellow: #F9AD32;
 $darkgrey: #333333;
 $lightgrey:    #777777;
 $lightestgrey: #999999;
+$white: #fff;
 
 
 // Custom bootstrap variables must be set or imported before bootstrap itself.
@@ -101,10 +102,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .col {
   flex: 1;
-  overflow: hidden;
 }
 
-
+.currentp {
+  padding: 0 3px 3px 0;
+  text-decoration: none;
+  border-bottom: 5px solid $yellow;
+}
 
 td h4 {
     padding: 0;
@@ -173,15 +177,28 @@ td h4 {
 }
 
 #header {
-    text-align: center;
+  text-align: center;
+
+  h1 {
+    margin: 50px 0px;
+  }
+
+  a {
+    margin-top: 30px;
+  }
+
+
 }
 
-#header h1 {
-  margin: 50px 0px;
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-#header a {
-  margin-top: 30px;
+.col {
+  flex: 1;
+  overflow: hidden;
 }
 
 // .navbar {
@@ -211,6 +228,7 @@ td h4 {
 
 .f-right {
   float: right;
+  display: inline;
 }
 
 .mobilemenu {
@@ -320,7 +338,7 @@ td h4 {
 .new-plant {
   flex: 1;
   cursor: pointer;
-  
+
   span{
     margin-right: 5px;
     font-size: 1.2em;
@@ -379,11 +397,7 @@ td h4 {
   font-size: 2em;
 }
 
-.currentp {
-  padding: 0 3px 3px 0;
-  text-decoration: none;
-  border-bottom: 5px solid $yellow;
-}
+
 
 .content .where {
   color: $yellow;
@@ -395,41 +409,58 @@ td h4 {
 footer  {
   background: $darkgrey;
 	padding: 20px;
+  display: flex;
 
-  img {
-    margin: 20px 0 8px 0;
-    height: 3em;
+  .footerleft {
+    flex: 1;
+    a {
+      text-align: left;
+      color: $lightestgrey;
+      padding: 10px;
+      font-size: 1em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+    a:hover {
+      color: $yellow;
+      text-decoration: none;
+    }
   }
 
-  p {
-    color: $yellow;
-    line-height: 1.8;
-    padding-top: 30px;
+  .footercenter {
+    flex: 2;
+    text-align: center;
+
+    img {
+      margin: 20px 0 8px 0;
+      height: 3em;
+    }
+
+    p {
+      color: $yellow;
+      line-height: 1.8;
+      padding-top: 30px;
+    }
   }
 
-  .footerleft a {
-    text-align: left;
-    color: $lightestgrey;
-    padding: 10px;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
+  .footerright {
+    flex: 1;
+    text-align: right;
+
+    a {
+      color: $lightestgrey;
+    }
+
+    a:hover, a h3:hover {
+      color:$yellow;
+      text-decoration: none;
+    }
   }
 
-  .footerleft a:hover {
-    color: $yellow;
-    text-decoration: none;
-  }
 
-  .footercenter { text-align: center; }
-  .footerright { text-align: right; }
-  .footerright a{ color: $lightestgrey; }
 
-  .footerright a:hover, .footerright a h3:hover {
-    color:$yellow;
-    text-decoration: none;
-  }
+
 }
 
 .toppad {
@@ -569,12 +600,49 @@ footer  {
 .normal {
   display: block;
 }
+
+.mfooter {
+  display: none;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  a {
+    flex: 1;
+    color: $lightestgrey;
+    font-size: 1.2em;
+    display: inline;
+    margin: 20px 0px;
+    text-align: center;
+  }
+
+  a:hover {
+    color: $yellow;
+    text-decoration: none;
+
+  }
+
+  p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+
 @media screen and (max-width: 790px) {
   .mobile {
     display: block;
   }
 
   .normal {
+    display: none;
+  }
+
+  .norm {
     display: none;
   }
 
@@ -585,13 +653,28 @@ footer  {
   .col-sm-6 {
     width: 50%;
   }
+
+  .mfooter {
+    display: block;
+  }
+
+  .new-plant a {
+    float: none;
+  }
+
+  .hidez {
+    display: none;
+  }
 }
 
 
 @media screen and (max-width: 1000px) {
-  .hidez {
-    display: none;
-  }
+
+
+
+
+
+
 
 
 }

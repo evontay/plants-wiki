@@ -3,22 +3,22 @@
 <div class="container-fluid">
 
 <div id="header">
-
   <div class="row">
-    <div class="col-sm-6 col-md-4 toppad">
+    <div class="col toppad">
       <h6 id="menu" class="bree">
         <span class="currentp">
-        <%= link_to plants_path do %>
+        <a class="currentp" href="<%= plants_path %>">
         <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> Plants
-        <% end %></span>
+        </a>
+      </span>
       </h6>
     </div>
 
-    <div class="col-sm-6 col-md-4 hidez">
+    <div class="col hidez">
       <img src="<%= asset_path('foodscapelogoblack.svg')%>"/>
     </div>
 
-    <div class="col-sm-6 col-md-4 toppad">
+    <div class="col toppad">
         <h6 id="menu" class="bree">
           <%= link_to locations_path do %>
           <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>  Locations
