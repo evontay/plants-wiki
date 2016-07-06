@@ -104,11 +104,6 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
 }
 
-.currentp {
-  padding: 0 3px 3px 0;
-  text-decoration: none;
-  border-bottom: 5px solid $yellow;
-}
 
 td h4 {
     padding: 0;
@@ -363,7 +358,8 @@ td h4 {
 
 #menu a {
   color: black;
-  padding: 0 3px 3px 0;
+  padding: 15px 3px 3px 0;
+  margin-top: 15px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -372,6 +368,20 @@ td h4 {
 #menu a:hover {
   border-bottom: 5px solid $yellow;
   color: $darkgrey;
+}
+
+
+.currentp {
+
+  a{
+  // padding: 0 3px 3px 0;
+  padding: 10px;
+  text-decoration: underline;
+  border-bottom: 5px solid $yellow;
+  // background-color: pink;
+  color: $yellow;
+
+  }
 }
 
 .searchform {
@@ -465,6 +475,10 @@ footer  {
 
 .toppad {
   padding-top: 30px;
+}
+
+.toppad2 {
+  padding-top: 20px;
 }
 
 .alignbottom {
@@ -665,6 +679,16 @@ footer  {
   .hidez {
     display: none;
   }
+
+  .toppad2 {
+    // margin-top: -10px;
+    padding: 20px;
+  }
+  // .currentp {
+  //   border: 3px solid $yellow;
+  //   padding: 2px;
+  //
+  // }
 }
 
 

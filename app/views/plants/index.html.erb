@@ -4,13 +4,13 @@
 
 <div id="header">
   <div class="row">
-    <div class="col toppad">
+    <div class="col toppad2">
       <h6 id="menu" class="bree">
-        <span class="currentp">
-        <a class="currentp" href="<%= plants_path %>">
+        <div class="currentp">
+        <a href="<%= plants_path %>">
         <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> Plants
         </a>
-      </span>
+      </div>
       </h6>
     </div>
 
@@ -18,7 +18,7 @@
       <img src="<%= asset_path('foodscapelogoblack.svg')%>"/>
     </div>
 
-    <div class="col toppad">
+    <div class="col toppad2">
         <h6 id="menu" class="bree">
           <%= link_to locations_path do %>
           <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>  Locations
